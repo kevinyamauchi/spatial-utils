@@ -43,3 +43,61 @@ Otherwise, perform a standard installation:
 ```bash
 pip install .
 ```
+
+# Usage
+### Loading a visium dataset
+
+You can load a dataset that was processed with Kallisto into an AnnData object using the `load_visium_kallisto` function:
+
+```python
+from squidpy_utils import load_visium_kallisto
+
+adata = load_visium_kallisto(
+    counts_table,
+    gene_names,
+    barcodes,
+    tissue_positions_list,
+    scale_factors,
+    hires_im,
+    lowres_im,
+    library_id,
+    chemistry_name
+)
+```
+The input arguments are explained below. To see an example of the function being used, please see the notebook at `/examples/load_visium_from_kallisto.ipynb`
+
+```
+Parameters
+----------
+counts_table : str
+        The path to the counts table output from Kallisto.
+        This file usually has the extension ".mtx".
+gene_names : str
+    The path to the file containing the gene names for the
+    Kallisto counts table. This file usually ends with "genes.txt".
+barcodes : str
+    The path to the file containing the spot barcodes for the
+    Kallisto counts table. This file usually ends with "barcodes.txt".
+tissue_positions_list : str
+    The path to the file containing the coordinates of each barcode
+    that is output from the 10X space ranger pipeline.
+    This file is usually called: "tissue_positions_list.csv".
+scale_factors : str
+    The path to the file output by the 10X space ranger pipeline
+    containing the scale factors that map the hires and
+    lowres image to the original image.
+    This file is usually called: "scalefactors_json.json"
+hires_im : str
+    The path to the hires image that is output from the
+    10X space ranger pipeline.
+    This file is usually called: tissue_hires_image.png
+lowres_im : str
+    The path to the lowres image that is output from the
+    10X space ranger pipeline.
+    This file is usually called: tissue_lowres_image.png
+library_id  : str
+    The unique identifier for the library that was sequenced.
+chemistry_name : str
+    The name of the chemistry used to create the library.
+    The default value is: "Spatial 3' v1"
+```
