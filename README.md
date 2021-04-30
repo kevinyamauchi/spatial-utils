@@ -3,7 +3,7 @@ a collection of utilities to support analysis with [squidpy](https://github.com/
 
 # installation
 ## easy installation
-You can use our environment.yaml file to create an anaconda environment with spatial-utils, squidpy, and all other dependencies. To do so, first download the environment.yaml file from this repo. Then, open a terminal, navigate to the directory you have downloaded the `environment.yaml` file to and run the following command
+You can use our environment.yaml file to create an anaconda environment with spatial-utils, squidpy, and all other dependencies. To do so, first download the [environment.yaml](https://raw.githubusercontent.com/kevinyamauchi/spatial-utils/main/environment.yaml) file from this repo (right click the link -> Save Link As...). Then, open a terminal, navigate to the directory you have downloaded the `environment.yaml` file to and run the following command
 
 ```bash
 conda env create -f environment.yaml
