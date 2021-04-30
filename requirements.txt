@@ -1,2 +1,4 @@
+numpy
 notebook
+scipy
 squidpy[all]
