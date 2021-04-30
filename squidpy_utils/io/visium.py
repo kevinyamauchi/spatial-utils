@@ -74,37 +74,6 @@ def load_visium_kallisto(
 
     Parameters
     ----------
-    counts_table : str
-        The path to the counts table output from Kallisto.
-        This file usually has the extension ".mtx".
-    gene_names : str
-        The path to the file containing the gene names for the
-        Kallisto counts table. This file usually ends with "genes.txt".
-    barcodes : str
-        The path to the file containing the spot barcodes for the
-        Kallisto counts table. This file usually ends with "barcodes.txt".
-    tissue_positions_list : str
-        The path to the file containing the coordinates of each barcode
-        that is output from the 10X space ranger pipeline.
-        This file is usually called: "tissue_positions_list.csv".
-    scale_factors : str
-        The path to the file output by the 10X space ranger pipeline
-        containing the scale factors that map the hires and
-        lowres image to the original image.
-        This file is usually called: "scalefactors_json.json"
-    hires_im : str
-        The path to the hires image that is output from the
-        10X space ranger pipeline.
-        This file is usually called: tissue_hires_image.png
-    lowres_im : str
-        The path to the lowres image that is output from the
-        10X space ranger pipeline.
-        This file is usually called: tissue_lowres_image.png
-    library_id  : str
-        The unique identifier for the library that was sequenced.
-    chemistry_name : str
-        The name of the chemistry used to create the library.
-        The default value is: "Spatial 3' v1"
 
     Returns
     -------
