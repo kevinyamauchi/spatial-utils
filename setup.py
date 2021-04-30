@@ -22,15 +22,15 @@ with open('requirements.txt') as f:
 
 
 # https://github.com/pypa/setuptools_scm
-use_scm = {"write_to": "squidpy_utils/_version.py"}
+use_scm = {"write_to": "spatial_utils/_version.py"}
 
 setup(
-    name='squidpy_utils',
+    name='spatial_utils',
     author='Kevin Yamauchi',
     author_email='kevin.yamauchi@gmail.com',
     license='BSD-3',
-    url='https://github.com/kevinyamauchi/squidpy-utils',
-    description='a collection of squidpy utilities',
+    url='https://github.com/kevinyamauchi/spatial-utils',
+    description='a collection of utilities for spatial-omics analysis',
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
     packages=find_packages(),

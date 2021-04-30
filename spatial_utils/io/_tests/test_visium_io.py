@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from squidpy_utils.io.visium import _clean_barcode
+from spatial_utils.io.visium import _clean_barcode
 
 
 def test_clean_barcode():
