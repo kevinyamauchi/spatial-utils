@@ -1,7 +1,21 @@
-# squidpy-utils
+# spatial-utils
 a collection of utilities to support analysis with [squidpy](https://github.com/theislab/squidpy).
 
 # installation
+## easy installation
+You can use our environment.yaml file to create an anaconda environment with spatial-utils, squidpy, and all other dependencies. To do so, first download the environment.yaml file from this repo. Then, open a terminal, navigate to the directory you have downloaded the `environment.yaml` file to and run the following command
+
+```bash
+conda env create -f environment.yaml
+```
+
+This creates an environment called spatial-analysis. If you would like to use the environment, you can activate the environment with the following:
+
+```bash
+conda activate spatial-analysis
+```
+
+## development installation
 Create an environment for working on your squidpy projects. If you are using anaconda, you can enter the following in your terminal:
 
 ```bash
@@ -23,16 +37,16 @@ cd ~/Documents
 Clone the squidpy-utils repository
 
 ```bash
-git clone https://github.com/kevinyamauchi/squidpy-utils.git
+git clone https://github.com/kevinyamauchi/spatial-utils.git
 ```
 
-Navigate to the squidpy-utils directory
+Navigate to the spatial-utils directory
 
 ```bash
-cd squidpy-utils
+cd spatial-utils
 ```
 
-Install `squidpy-utiils`. If you would like to be able to add/edit functionality, install in editable mode:
+Install `spatial-utiils`. If you would like to be able to add/edit functionality, install in editable mode:
 
 ```bash
 pip install -e .
@@ -50,7 +64,7 @@ pip install .
 You can load a dataset that was processed with Kallisto into an AnnData object using the `load_visium_kallisto` function:
 
 ```python
-from squidpy_utils import load_visium_kallisto
+from spatial_utils import load_visium_kallisto
 
 adata = load_visium_kallisto(
     counts_table,
